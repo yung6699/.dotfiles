@@ -32,18 +32,18 @@ rm -rf fonts
 
 brew install zsh-syntax-highlighting
 
-sudo echo 'set number' >> ~/.vimrc
-sudo echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
+sudo echo 'set number' >> ${HOME}/.vimrc
+sudo echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ${HOME}/.zshrc
 sudo echo 'prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
-}' >> ~/.zshrc
+}' >> ${HOME}/.zshrc
 
-sudo echo 'alias python="python3"' >> ~/.zshrc
+sudo echo 'alias python="python3"' >> ${HOME}/.zshrc
 
 
-source ~/.zshrc
+source ${HOME}/.zshrc
 
 # 필요 앱  설치
 brew cask install visual-studio-code
