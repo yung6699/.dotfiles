@@ -1,5 +1,3 @@
-# usr/username 에서 실행해야한다.
-
 # homebrew 설치
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
@@ -33,15 +31,32 @@ rm -rf fonts
 brew install zsh-syntax-highlighting
 
 sudo echo 'set number' >> ${HOME}/.vimrc
+
 sudo echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ${HOME}/.zshrc
-sudo echo 'prompt_context() {
+
+sudo echo '
+prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
-}' >> ${HOME}/.zshrc
+}
+' >> ${HOME}/.zshrc
+
+
+
+sudo echo '
+prompt_newline() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{%k%F{blue}%}$SEGMENT_SEPARATOR"
+  else
+    echo -n "%{%k%}"
+  fi
+  echo -n "%{%f%}"
+  CURRENT_BG=''
+}
+' >> ${HOME}/.zshrc
 
 sudo echo 'alias python="python3"' >> ${HOME}/.zshrc
-
 
 source ${HOME}/.zshrc
 
