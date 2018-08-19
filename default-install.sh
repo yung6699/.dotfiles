@@ -1,3 +1,6 @@
+# xcode 설치
+xcode-select --install
+
 # homebrew 설치
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
@@ -10,8 +13,8 @@ brew cask install room/cask/brew-cask
 brew cask install iterm2
 
 # vim 에디터 설정
-sudo echo 'set number' >> ${HOME}/.vimrc
-sudo echo 'set backspace=indent,eol,start' >> ${HOME}/.vimrc
+sudo echo 'set number' >> ${ZDOTDIR:-$HOME}/.vimrc
+sudo echo 'set backspace=indent,eol,start' >> ${ZDOTDIR:-$HOME}/.vimrc
 
 # zsh 쉘 위치 찾아 적용
 sudo echo "$(which zsh)" >> /etc/shells
@@ -37,7 +40,7 @@ rm -rf fonts
 
 # zsh 플러그인 설치
 brew install zsh-syntax-highlighting
-sudo echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ${HOME}/.zshrc
+sudo echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>  ${ZDOTDIR:-$HOME}/.zshrc
 
  # autojump 설치 후 설정
 brew install autojump
