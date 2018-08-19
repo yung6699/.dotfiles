@@ -1,10 +1,10 @@
-# xcode 설치
+# Apple Download CLI Tools
 xcode-select --install
 
 # homebrew 설치
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
 brew doctor
+brew update
 brew install -y zsh git vim curl wget
 
 # cask 설치
