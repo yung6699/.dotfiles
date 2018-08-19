@@ -1,0 +1,22 @@
+'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' 
+
+# oh-my-zsh 프롬프트에 기본으로 표시되는 사용자 이름 삭제하기 
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+
+# 멀티라인 적용하기
+prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
+%(?.%F{$CURRENT_BG}.%F{red})❯%f"
+
+  else
+    echo -n "%{%k%}"
+  fi
+
+  echo -n "%{%f%}"
+  CURRENT_BG=''
+}

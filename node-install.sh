@@ -10,4 +10,4 @@ source ${HOME}/.zshrc
 
 nvm install node --lts
 
-npm install -g yarn babel-cli eslint eslint-cli hexo-cli pm2 nodemon create-react-app
+npm install -g yarn babel-cli eslint eslint-cli hexo-cli pm2 nodemon create-react-app webpack webpack-cli 
