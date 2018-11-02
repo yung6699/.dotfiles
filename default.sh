@@ -65,6 +65,7 @@ source ${ZDOTDIR:-$HOME}/.zshrc
 # 필요 앱 설치
 brew cask install visual-studio-code
 brew cask install android-file-transfer google-chrome karabiner-elements spectacle flux Alfred
+brew cask install Itsycal Allkdic PDF-Reader AppCleaner
 # brew cask install macx-youtube-downloader youtube-to-mp3
 
 sudo reboot

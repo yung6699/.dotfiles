@@ -1,0 +1,6 @@
+default.sh 설치 후
+
+키보드 세팅, 보안 설정 창 확인 후 한영키 및 caplock키 변경 할 것
+
+참고하여 zsh 설정 완료하기
+https://nesoy.github.io/articles/2017-03/ZSH 
