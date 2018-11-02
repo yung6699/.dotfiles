@@ -67,5 +67,5 @@ brew cask install visual-studio-code
 brew cask install android-file-transfer google-chrome karabiner-elements spectacle flux Alfred
 brew cask install macx-youtube-downloader youtube-to-mp3
 
-reboot
+sudo reboot
 
