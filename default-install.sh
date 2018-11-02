@@ -10,12 +10,12 @@ defaults write com.apple.dock expose-animation-duration -float 0.15;killall Dock
 # homebrew 설치
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew doctor
 brew update
 brew install -y zsh vim curl wget
 
 # cask 설치
-brew install cask room/cask/brew-cask
-brew cask install iterm2
+brew install cask room/cask/brew-cask2
 
 # vim 에디터 설정
 sudo echo 'set number' >> ${ZDOTDIR:-$HOME}/.vimrc
@@ -33,7 +33,6 @@ echo $SHELL
 # oh-my-zsh 설치
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
-
 # Powerline fonts 설치 clone
 git clone https://github.com/powerline/fonts.git --depth=1
 # install
@@ -46,11 +45,6 @@ rm -rf fonts
 # zsh 플러그인 설치
 brew install zsh-syntax-highlighting
 sudo echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>  ${ZDOTDIR:-$HOME}/.zshrc
-
- # autojump 설치 후 설정
-brew install autojump
-echo "[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh" >> ${ZDOTDIR:-$HOME}/.zshrc
-
 
 # autosuggestions 설치 후 설정
 brew install zsh-autosuggestions
@@ -65,7 +59,7 @@ source ${ZDOTDIR:-$HOME}/.zshrc
 # 필요 앱 설치
 brew cask install visual-studio-code
 brew cask install android-file-transfer google-chrome karabiner-elements spectacle flux Alfred
-brew cask install macx-youtube-downloader youtube-to-mp3
+# brew cask install macx-youtube-downloader youtube-to-mp3
 
 sudo reboot
 
