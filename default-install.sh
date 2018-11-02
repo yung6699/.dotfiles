@@ -35,9 +35,11 @@ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | 
 
 # Powerline fonts 설치 clone
 git clone https://github.com/powerline/fonts.git --depth=1
+
 # install
 cd fonts
 ./install.sh
+
 # clean-up a bit
 cd ..
 rm -rf fonts
