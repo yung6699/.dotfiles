@@ -5,7 +5,7 @@ brew update
 brew install -y zsh git vim curl wget
 
 # cask 설치
-brew cask install room/cask/brew-cask
+brew install cask room/cask/brew-cask
 
 # vim 에디터 설정
 sudo echo 'set number' >> ${ZDOTDIR:-$HOME}/.vimrc
