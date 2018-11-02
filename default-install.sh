@@ -1,7 +1,7 @@
 defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 
-defaults write -g ApplePressHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g QLPanelAnimationDuration -float 0;killall Finder
 defaults write com.apple.Dock autohide-delay -float 0;killall Dock
 defaults write com.apple.dock expose-animation-duration -float 0.15;killall Dock
@@ -14,7 +14,7 @@ brew update
 brew install -y zsh vim curl wget
 
 # cask 설치
-brew cask install room/cask/brew-cask
+brew install cask room/cask/brew-cask
 brew cask install iterm2
 
 # vim 에디터 설정
@@ -57,14 +57,14 @@ brew install zsh-autosuggestions
 echo "source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc           
 
 # 멀티라인 및 터미널 세팅
-sudo echo "source ${ZDOTDIR:-$HOME}/.dotfiles/values/zshValues" >> ${ZDOTDIR:-$HOME}/.zshrc
+sudo echo "source ~/.dotfiles/zshValues" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 # zshrc 재시작
 source ${ZDOTDIR:-$HOME}/.zshrc
 
 # 필요 앱 설치
 brew cask install visual-studio-code
-brew cask install android-file-transfer google-chrome karabiner-elements spectacle flux
+brew cask install android-file-transfer google-chrome karabiner-elements spectacle flux Alfred
 brew cask install macx-youtube-downloader youtube-to-mp3
 
 reboot
