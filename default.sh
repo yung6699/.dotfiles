@@ -49,18 +49,18 @@ rm -rf fonts
 
 # zsh 플러그인 설치
 brew install zsh-syntax-highlighting
-sudo echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>  ${ZDOTDIR:-$HOME}/.zshrc
+echo 'source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>  ${ZDOTDIR:-$HOME}/.zshrc
 
 # autosuggestions 설치 후 설정
 brew install zsh-autosuggestions
 echo "source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc           
 
 # 멀티라인 및 터미널 세팅
-sudo echo "source ~/.dotfiles/zshValues" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "source ~/.dotfiles/zshValues" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 
 # nvm 설치 및 node 설치
-sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 
 # zshrc 재시작
 source ${ZDOTDIR:-$HOME}/.zshrc
