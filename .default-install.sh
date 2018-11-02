@@ -1,14 +1,19 @@
-# Apple Download CLI Tools
-xcode-select --install
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
+
+defaults write -g ApplePressHoldEnabled -bool false
+defaults write -g QLPanelAnimationDuration -float 0;killall Finder
+defaults write com.apple.Dock autohide-delay -float 0;killall Dock
+defaults write com.apple.dock expose-animation-duration -float 0.15;killall Dock
+
 
 # homebrew 설치
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor
+
 brew update
-brew install -y zsh git vim curl wget
+brew install -y zsh vim curl wget
 
 # cask 설치
-
 brew cask install room/cask/brew-cask
 brew cask install iterm2
 
@@ -59,8 +64,8 @@ source ${ZDOTDIR:-$HOME}/.zshrc
 
 # 필요 앱 설치
 brew cask install visual-studio-code
-brew cask install android-file-transfer simplenote google-chrome karabiner-elements alfred spectacle flux
-# brew cask install macx-youtube-downloader youtube-to-mp3
+brew cask install android-file-transfer google-chrome karabiner-elements spectacle flux
+brew cask install macx-youtube-downloader youtube-to-mp3
 
 reboot
 
