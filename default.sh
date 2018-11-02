@@ -30,6 +30,9 @@ chsh -s $(which zsh)
 # 쉘 확인
 echo $SHELL
 
+# zshrc 재시작
+source ${ZDOTDIR:-$HOME}/.zshrc
+
 # oh-my-zsh 설치
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
