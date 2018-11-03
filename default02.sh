@@ -29,8 +29,9 @@ echo "source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ${
 echo "source ~/.dotfiles/zshValues" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 
-# nvm 설치 및 node 설치
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+# node 설치
+brew install npm
+
 
 # zshrc 재시작
 source ${ZDOTDIR:-$HOME}/.zshrc
