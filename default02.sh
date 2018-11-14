@@ -32,6 +32,25 @@ echo "source ~/.dotfiles/zshValues" >> ${ZDOTDIR:-$HOME}/.zshrc
 # node 설치
 brew install npm
 
+# save a list of what is installed globally
+npm -g ls --depth=0 > npm_global_packages.txt
+
+# Make a directory for global installations:
+mkdir ~/.npm-global
+
+# Configure npm to use the new directory path:
+npm config set prefix '~/.npm-global'
+# NOTE: add this to your profile as well:
+export PATH=~/.npm-global/bin:$PATH 
+npm install npm -g
+echo "NPM global directory changed: $(npm config get prefix)"
+
+# Remove old npm
+sudo rm /usr/local/bin/npm
+sudo rm -rf /usr/local/lib/node_modules
+
+# Now reinstall any global npm modules using the list we created above
+
 
 # zshrc 재시작
 source ${ZDOTDIR:-$HOME}/.zshrc
