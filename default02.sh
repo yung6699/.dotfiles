@@ -49,8 +49,9 @@ echo "NPM global directory changed: $(npm config get prefix)"
 sudo rm /usr/local/bin/npm
 sudo rm -rf /usr/local/lib/node_modules
 
-# Now reinstall any global npm modules using the list we created above
-
+# node 버전 관리 n 설치 및 LTS 버전 설치
+sudo npm install -g n
+n latest 
 
 # zshrc 재시작
 source ${ZDOTDIR:-$HOME}/.zshrc
@@ -59,7 +60,7 @@ source ${ZDOTDIR:-$HOME}/.zshrc
 brew cask install visual-studio-code
 brew cask install android-file-transfer google-chrome spectacle flux Alfred
 
-brew cask install macx-youtube-downloader youtube-to-mp3
+#brew cask install macx-youtube-downloader youtube-to-mp3
 
 sudo reboot
 

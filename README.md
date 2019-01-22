@@ -2,20 +2,18 @@
 
 This is for my mac initial setting
 
-1. default-install.sh
-    >  - xcode select 
-    >  - zsh shell
-    >  - homebrew
-    >  - iterm2 setting
-    >  - mac application
+1. default.sh
+   - keyboard setting
+   - zsh shell
+      
 
 
 2. node-install.sh
-    > - nvm
-    > - npm i -global
+   - homebrew
+   - npm install & setting
+   - n install & node install LTS
+   - mac application
 
-
-3. dev-install.sh (docker)
 
 # Install
 ```
@@ -26,6 +24,6 @@ git clone https://github.com/yung6699/.dotfiles.git
 cd .dotfiles
 
 # run .sh files
-./default-install.sh
-./node-install.sh
+./default.sh
+./default02.sh
 ```
