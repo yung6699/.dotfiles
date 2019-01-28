@@ -2,6 +2,8 @@
 
 This is for my mac initial setting
 
+* xcode-select --install
+
 1. default.sh
    - keyboard setting
    - zsh shell
