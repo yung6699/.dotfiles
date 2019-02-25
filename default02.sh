@@ -37,8 +37,9 @@ mkdir ~/.npm-global
 
 # Configure npm to use the new directory path:
 npm config set prefix '~/.npm-global'
+
 # NOTE: add this to your profile as well:
-echo "export PATH=~/.npm-global/bin:$PATH" >> ${ZDOTDIR:-$HOME}/.zshrc 
+echo "export PATH='~/.npm-global/bin:$PATH'" >> ${ZDOTDIR:-$HOME}/.zshrc 
 npm install npm -g
 echo "NPM global directory changed: $(npm config get prefix)"
 
